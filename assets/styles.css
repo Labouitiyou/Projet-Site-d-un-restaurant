@@ -1,3 +1,10 @@
 header {
-    color: red;
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ header img {
+    height: 44px;
+    width: 162px;
  }
