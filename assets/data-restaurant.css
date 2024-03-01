@@ -1,0 +1,151 @@
+header .fa-arrow-left {
+	 font-size: 30px;
+	 position: absolute;
+	 left: 25px;
+	 top: 15px;
+}
+ .menu_image {
+	 position: relative;
+}
+ .menu_image img {
+	 width: 100%;
+	 height: 275px;
+}
+ .vide {
+	 width: 100%;
+	 height: 35px;
+	 border-radius: 60px 60px 0 0;
+	 background-color: #f6f6f6;
+	 padding: 0;
+	 margin: 0;
+	 position: absolute;
+	 bottom: 0;
+}
+ .menu {
+	 background-color: #f6f6f6;
+	 padding: 0px 13px 0 13px;
+	 box-sizing: border-box;
+	 width: 100%;
+	 display: flex;
+	 flex-direction: column;
+	 gap: 40px;
+}
+ .menu .menu__title {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-between;
+	 align-items: center;
+}
+ .menu .menu__title h1 {
+	 font-size: 28px;
+	 font-family: 'Shrikhand';
+	 font-weight: 400;
+}
+ .menu .menu__title .fa-heart {
+	 font-size: 22px;
+	 margin-right: 25px;
+}
+ .menu .menu__card {
+	 display: flex;
+	 flex-direction: column;
+	 gap: 12px;
+}
+ .menu .menu__card .menu__type {
+	 display: flex;
+	 flex-direction: column;
+	 gap: 10px;
+}
+ .menu .menu__card .menu__type h2 {
+	 font-size: 16px;
+	 font-weight: 300;
+	 margin: 0;
+	 padding: 0;
+}
+ .menu .menu__card .menu__type hr {
+	 width: 40px;
+	 height: 3px;
+	 border: none;
+	 background-color: var(--green-bg);
+	 justify-self: left;
+	 padding: 0;
+	 margin: 0;
+}
+ .menu .menu__card .menu-element {
+	 background-color: white;
+	 border-radius: 15px;
+	 padding: 15px;
+	 display: flex;
+	 flex-direction: column;
+	 gap: 5px;
+}
+ .menu .menu__card .menu-element h3 {
+	 font-size: 18px;
+	 font-weight: 500;
+	 padding: 0;
+	 margin: 0;
+}
+ .menu .menu__card .menu-element .element__content {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-between;
+	 margin: 0;
+	 padding: 0;
+}
+ .menu .menu__card .menu-element .element__content p {
+	 font-size: 15px;
+	 font-weight: 300;
+	 padding: 0;
+	 margin: 0;
+}
+ .menu .menu__card .menu-element .element__content .price {
+	 font-size: 15px;
+	 font-weight: 700;
+	 padding: 0;
+	 margin: 0;
+}
+ .menu .commander {
+	 display: flex;
+	 justify-content: center;
+}
+ .menu .commander .btn {
+	 padding: 16px 48px;
+	 margin-bottom: 50px;
+}
+/****** Media queries ***********/
+/* Medium and large device*/
+ @media (min-width: 768px) {
+	/*Fin media queries */
+	 header .fa-arrow-left {
+		 top: 32px;
+	}
+	 main {
+		 background-color: white;
+	}
+	 .menu_image {
+		 display: flex;
+		 justify-content: center;
+	}
+	 .menu_image img {
+		 width: 100%;
+		 height: 394px;
+		 object-fit: cover;
+	}
+	 .vide {
+		 width: 75%;
+		 height: 45px;
+	}
+	 .menu {
+		 width: 75%;
+		 margin: auto;
+	}
+	 .menu .menu__title {
+		 margin: auto;
+		 display: flex;
+		 gap: 24px;
+	}
+	 .menu .menu__card {
+		 width: 60%;
+		 margin: auto;
+	}
+}
+ 
