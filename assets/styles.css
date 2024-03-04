@@ -195,16 +195,7 @@ header {
   font-weight: 300;
   margin: 0;
  }
- /*.card-content .fa-heart{
-  font-size: 22px;
-  position: absolute;
-  left: 87%;
-  bottom: 35px;
- }
- .card-content .fa-solid{
-  color:transparent;
-  cursor: pointer;
-}*/
+ 
 .card .fa-heart{
   font-size: 22px;
   position: absolute;
@@ -216,8 +207,6 @@ header {
   cursor: pointer;
 }
 
-
- 
  footer{
   background-color: #353535;
   padding: 22px 25px;
@@ -265,7 +254,7 @@ input:checked + label .fa-solid{
     background: var(--Button-Gradient);
     background-clip: text;
     animation-name: progress;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 @keyframes progress {
  from {
