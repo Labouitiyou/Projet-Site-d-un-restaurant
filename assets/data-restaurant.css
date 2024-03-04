@@ -44,6 +44,13 @@ header .fa-arrow-left {
  .menu .menu__title .fa-heart {
 	 font-size: 22px;
 	 margin-right: 25px;
+	 /*transition: 1s ease-in;
+	 background-clip: text;
+	 color: transparent;*/
+
+}
+.fa-heart:hover {
+background: linear-gradient(90deg, #8360c3, pink);
 }
  .menu .menu__card {
 	 display: flex;

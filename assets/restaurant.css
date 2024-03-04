@@ -35,8 +35,9 @@ gap: 40px;
 .menu__title{
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
+   gap:30px;
    align-items: center;
+   position: relative;
 }
 .menu__title h1{
 font-size: 28px;
@@ -45,8 +46,16 @@ font-weight: 400;
 }
 .menu__title .fa-heart{
     font-size: 22px;
-    margin-right: 25px;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    
 }
+.menu__title .fa-solid{
+    color:transparent;
+    cursor: pointer;
+  }
+.menu__title input[type="checkbox"] {display:none;}
 .menu__card{
     display: flex;
     flex-direction: column;
@@ -75,29 +84,51 @@ hr{
 .menu-element{
 background-color: white;
 border-radius: 15px;
-padding: 15px;
-display: flex;
-flex-direction: column;
-gap: 5px;
+position: relative;
+box-sizing: border-box;
+width: 100%;
+height: 72px;
 }
-.menu-element h3{
+.menu-element .element__name{
+    box-sizing: border-box;
+        display: flex;
+        background-color:white;
+        flex-direction: column;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 0;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+        position: absolute;
+        left: 0;
+       transition-duration: 2s;
+       z-index: 2; 
+}
+.element__name h3{
     font-size: 18px;
     font-weight:500 ;
     padding: 0;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-.menu-element .element__content{
+.element__name .element__content{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
     padding: 0;
 }
-.element__content p {
+.element__content h4 {
     font-size: 15px;
     font-weight: 300;
     padding: 0;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .element__content .price {
     font-size: 15px;
@@ -105,6 +136,31 @@ gap: 5px;
     padding: 0;
     margin: 0;
 }
+.menu-element .cocher{
+        width: 16%;
+        height: 100%;
+        box-sizing: border-box;
+        border-radius: 0 15px 15px 0;
+        color: white;
+        background-color:var(--green-bg);
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition-duration: 2s;
+        z-index: 1;
+}
+input[type="checkbox"] {display:none;}
+label{
+    cursor: pointer;
+}
+input:checked + label .element__name{
+       width:  84%;
+       border-radius: 15px 0 0 15px;
+   }
 .menu .commander {
     display: flex;
     justify-content: center;
@@ -113,7 +169,85 @@ gap: 5px;
     padding: 16px 48px;
     margin-bottom:50px;
 }
-
+/*Les animations */
+@keyframes progress {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.element1{
+    opacity: 0;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element2{
+    opacity: 0;
+    animation-delay: 1s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element3{
+    opacity: 0;
+    animation-delay: 2s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element4{
+    opacity: 0;
+    animation-delay: 3s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element5{
+    opacity: 0;
+    animation-delay: 4s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element6{
+    opacity: 0;
+    animation-delay: 5s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element7{
+    opacity: 0;
+    animation-delay: 6s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element8{
+    opacity: 0;
+    animation-delay: 7s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element9{
+    opacity: 0;
+    animation-delay: 8s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element10{
+    opacity: 0;
+    animation-delay: 9s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+  
 /****** Media queries ***********/
 /* Medium and large device*/
 
@@ -144,8 +278,14 @@ gap: 5px;
    }
     .menu__title{
         margin: auto;
-        display: flex;
-        gap:24px;
+        gap: 50px;
+    }
+    .menu__title .fa-heart{
+        
+        right: 0;
+
+        bottom: 10px;
+        
     }
 .menu__card{
     width: 60%;

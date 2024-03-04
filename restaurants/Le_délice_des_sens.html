@@ -11,10 +11,10 @@
        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
        crossorigin="anonymous" referrerpolicy="no-referrer">
    <title> Ohmyfood</title>
-  <!--<link rel="stylesheet" type="text/css" href="../assets/styles.css">
-   <link rel="stylesheet" type="text/css" href="../assets/restaurant.css">-->
-   <link rel="stylesheet" type="text/css" href="../assets/data.css">
-   <link rel="stylesheet" type="text/css" href="../assets/data-restaurant.css">
+  <link rel="stylesheet" type="text/css" href="../assets/styles.css">
+   <link rel="stylesheet" type="text/css" href="../assets/restaurant.css">
+   <!--<link rel="stylesheet" type="text/css" href="../assets/data.css">
+   <link rel="stylesheet" type="text/css" href="../assets/data-restaurant.css">-->
 </head>
 <body>
    <header> 
@@ -28,69 +28,126 @@
          </div>
       <section class="menu">
          <div class="menu__title"><h1>Le délice des sens</h1>
-             <i class="fa-regular fa-heart"></i>
+            <div> <input type="checkbox" name="heart" id="heart1"/>
+               <label for="heart1"><i class="fa-regular fa-heart"></i>
+               <i class="fa-solid fa-heart"></i></label>
+            </div>
          </div>
          <section class="menu__card">
              <div class="menu__type"><h2>ENTRÉES</h2><hr></div>
-             <article class="menu-element"> 
-                <h3>Tartare de thon </h3>
-                <div class="element__content">
-                  <p>Assaisonné au yuzu </p> <p class="price">25€</p>
-                </div>
+             <article class="menu-element element1"> 
+               <input type="checkbox" name="coche" id="coche"/> 
+               <label  for="coche">
+                  <div class="element__name">
+                  <h3>Tartare de thon </h3>
+                  <div class="element__content">
+                    <h4>Assaisonné au yuzu </h4> <p class="price">25€</p>
+                  </div>
+               </div>
+               <div class="cocher"><i class="fa-solid fa-circle-check"></i></div>
+               </label>
              </article>
-             <article class="menu-element"> 
-               <h3>Bouchée de homard croustillant </h3>
-               <div class="element__content">
-                 <p>Et sa farandole de petits légumes </p> <p class="price">35€</p>
+             <article class="menu-element element2"> 
+               <input type="checkbox" name="coche" id="coche1"/> 
+               <label  for="coche1">
+                  <div class="element__name">
+                 <h3>Bouchée de homard croustillant </h3>
+                 <div class="element__content">
+                   <h4>Et sa farandole de petits légumes </h4> <p class="price">35€</p>
+                 </div>
                </div>
+               <div class="cocher"><i class="fa-solid fa-circle-check"></i></div>
+               </label>
             </article>
-            <article class="menu-element"> 
-               <h3>Velouté de cèpes </h3>
-               <div class="element__content">
-                 <p>Aux truffes</p> <p class="price">20€</p>
+            <article class="menu-element element3"> 
+               <input type="checkbox" name="coche" id="coche2"/> 
+               <label  for="coche2">
+                  <div class="element__name">
+                 <h3>Velouté de cèpes </h3>
+                 <div class="element__content">
+                   <h4>Aux truffes</h4> <p class="price">20€</p>
+                 </div>
                </div>
+               <div class="cocher"><i class="fa-solid fa-circle-check"></i></div>
+               </label>
             </article>
          </section>
           <section class="menu__card">
             <div class="menu__type"><h2>PLATS</h2> <hr></div>
-            <article class="menu-element"> 
-               <h3>Poulet rôti aux herbes de Provence </h3>
-               <div class="element__content">
-                 <p> Et sa crème de truffe</p> <p class="price">40€</p>
-               </div>
+            <article class="menu-element element4"> 
+               <input type="checkbox" name="coche" id="coche3"/> 
+               <label  for="coche3">
+                <div class="element__name">
+                 <h3>Poulet rôti aux herbes de Provence </h3>
+                 <div class="element__content">
+                   <h4> Et sa crème de truffe</h4> <p class="price">40€</p>
+                 </div>
+              </div>
+               <div class="cocher"><i class="fa-solid fa-circle-check"></i></div>
+               </label>
             </article>
-            <article class="menu-element"> 
-              <h3>Langouste rôtie </h3>
-              <div class="element__content">
-                <p>Et ses légumes de saison </p> <p class="price">35€</p>
+            <article class="menu-element element5"> 
+               <input type="checkbox" name="coche" id="coche4"/> 
+               <label  for="coche4">
+                  <div class="element__name">
+                 <h3>Langouste rôtie </h3>
+                 <div class="element__content">
+                  <h4>Et ses légumes de saison </h4> <p class="price">35€</p>
+                 </div>
               </div>
+              <div class="cocher"><i class="fa-solid fa-circle-check"></i></div>
+               </label>
            </article>
-           <article class="menu-element"> 
-              <h3>Côte de bœuf Angus </h3>
-              <div class="element__content">
-                <p>Et sa purée de panais</p> <p class="price">44€</p>
-              </div>
+           <article class="menu-element element6"> 
+            <input type="checkbox" name="coche" id="coche5"/> 
+               <label  for="coche5">
+                  <div class="element__name">
+                 <h3>Côte de bœuf Angus </h3>
+                 <div class="element__content">
+                   <h4>Et sa purée de panais</h4> <p class="price">44€</p>
+                </div>
+               </div>
+              <div class="cocher"><i class="fa-solid fa-circle-check"></i></div>
+               </label>
            </article>
          </section>
          <section class="menu__card">
             <div class="menu__type"><h2>DESSERTS</h2> <hr></div>
-            <article class="menu-element"> 
-              <h3>Farandole de desserts </h3>
-              <div class="element__content">
-                <p>Du chef </p> <p class="price">18€</p>
+            <article class="menu-element element7"> 
+               <input type="checkbox" name="coche" id="coche6"/> 
+               <label  for="coche6">
+                  <div class="element__name">
+                <h3>Farandole de desserts </h3>
+                <div class="element__content">
+                  <h4>Du chef </h4> <p class="price">18€</p>
+                </div>
               </div>
+              <div class="cocher"><i class="fa-solid fa-circle-check"></i></div>
+               </label>
             </article>
-            <article class="menu-element"> 
-               <h3>Crème brulée </h3>
-               <div class="element__content">
-                 <p>Revisitée</p> <p class="price">22€</p>
-               </div>
+            <article class="menu-element element8"> 
+               <input type="checkbox" name="coche" id="coche7"/> 
+               <label  for="coche7">
+                  <div class="element__name">
+                 <h3>Crème brulée </h3>
+                 <div class="element__content">
+                   <h4>Revisitée</h4> <p class="price">22€</p>
+                </div>
+              </div>
+               <div class="cocher"><i class="fa-solid fa-circle-check"></i></div>
+               </label>
             </article>
-            <article class="menu-element"> 
-               <h3> Tiramisu </h3>
-               <div class="element__content">
-                 <p>À la noisette </p> <p class="price">23€</p>
+            <article class="menu-element element9"> 
+               <input type="checkbox" name="coche" id="coche8"/> 
+               <label  for="coche8">
+                  <div class="element__name">
+                 <h3> Tiramisu </h3>
+                 <div class="element__content">
+                   <h4>À la noisette </h4> <p class="price">23€</p>
+                 </div>
                </div>
+               <div class="cocher"><i class="fa-solid fa-circle-check"></i></div>
+               </label>
             </article>
          </section>
          <div class="commander">
