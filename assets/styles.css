@@ -195,13 +195,23 @@ header {
   font-weight: 300;
   margin: 0;
  }
- .card-content .fa-heart{
+ /*.card-content .fa-heart{
   font-size: 22px;
   position: absolute;
   left: 87%;
   bottom: 35px;
  }
  .card-content .fa-solid{
+  color:transparent;
+  cursor: pointer;
+}*/
+.card .fa-heart{
+  font-size: 22px;
+  position: absolute;
+  left: 87%;
+  bottom: 35px;
+ }
+ .card .fa-solid{
   color:transparent;
   cursor: pointer;
 }
@@ -249,7 +259,7 @@ margin: 0;
 }
 
 /* Animation changement de couleur des coeurs */
-.card-content input[type="checkbox"] {display:none;}
+.card input[type="checkbox"] {display:none;}
 
 input:checked + label .fa-solid{
     background: var(--Button-Gradient);
@@ -305,7 +315,7 @@ input:checked + label .fa-solid{
   row-gap: 50px;
   margin-top: 28px;
  }
- .menus-cards a {
+ .menus-cards .card {
   width: 45%;
  }
  footer{
