@@ -1,10 +1,22 @@
+$main-bg-color:#F6F6F6;
+$Primary: #9356DC;
+$green-bg:#99E2D0;
+$Button-Gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+$shadow-color:rgba(0, 0, 0, 0.25); 
+$white: white;
+$location-bg-color:#EAEAEA;
+$black-color:#353535;
+$icone-color:#7E7E7E;
+$green-color:#008766;
+
+/* Header */
 header .fa-arrow-left{
     font-size: 30px;
     position: absolute;
     left: 25px;
     top: 15px;
 }
-
+/*Headline*/
 .menu_image{
     position: relative;
     img{
@@ -12,19 +24,23 @@ header .fa-arrow-left{
         height: 275px;
     }
 }
+
 .vide{
     width: 100%;
     height: 35px;
     border-radius: 60px 60px 0 0;
-    background-color:#F6F6F6;
+    background-color:$main-bg-color;
     padding: 0;
     margin: 0;
     position: absolute;
     bottom: 0;
 }
 
+/* Menus */
+
+    
 .menu{
-background-color: #F6F6F6;
+background-color: $main-bg-color;
 padding: 0px 13px 0 13px;
 box-sizing: border-box;
 width: 100%;
@@ -34,22 +50,29 @@ gap: 40px;
 .menu__title{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap:30px;
     align-items: center;
+    position: relative;
     h1{
      font-size: 28px;
      font-family: 'Shrikhand';
      font-weight: 400;
      }
      .fa-heart{
-         font-size: 22px;
-         margin-right: 25px;
-     }
+        font-size: 22px;
+        position: absolute;
+        right: 30px;
+        bottom: 10px; 
+    }
+    .fa-solid{
+        color:transparent;
+        cursor: pointer;
+      }
  }
- .menu__card{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.menu__card{
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
     .menu__type {
         display: flex;
         flex-direction: column;
@@ -64,48 +87,85 @@ gap: 40px;
             width: 40px;
             height: 3px;
             border: none;
-            background-color: var(--green-bg);
+            background-color: $green-bg;
             justify-self: left;
             padding: 0;
             margin: 0;
         }
     }
     .menu-element{
-        background-color: white;
+        background-color: $white;
         border-radius: 15px;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        h3{
-            font-size: 18px;
-            font-weight:500 ;
-            padding: 0;
-            margin: 0;
-        }
-        .element__content{
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        height: 72px;
+        .element__name{
+            box-sizing: border-box;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            background-color:white;
+            flex-direction: column;
+            border-radius: 15px;
+            padding: 15px;
             margin: 0;
-            padding: 0;
-            p {
-                font-size: 15px;
-                font-weight: 300;
+            gap: 5px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            transition-duration: 2s;
+            z-index: 2; 
+            h3{
+                font-size: 18px;
+                font-weight:500 ;
                 padding: 0;
                 margin: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
-            .price {
-                font-size: 15px;
-                font-weight: 700;
-                padding: 0;
+            .element__content{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
                 margin: 0;
+                padding: 0;
+                h4 {
+                    font-size: 15px;
+                    font-weight: 300;
+                    padding: 0;
+                    margin: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .price {
+                    font-size: 15px;
+                    font-weight: 700;
+                    padding: 0;
+                    margin: 0;
+                }
             }
-        
         }
+        .cocher{
+            width: 16%;
+            height: 100%;
+            box-sizing: border-box;
+            border-radius: 0 15px 15px 0;
+            color: white;
+            background-color:var(--green-bg);
+            font-size: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition-duration: 2s;
+            z-index: 1;
         }
+    }       
 }
-
 .commander {
     display: flex;
     justify-content: center;
@@ -114,7 +174,97 @@ gap: 40px;
         margin-bottom:50px;
     }
 }
+}
 
+/* Les animations */
+/* L'apparition de la coche pour ajouter les plats à la commande*/
+label{
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    display:none;
+    &:checked + label .element__name{
+        width:  84%;
+        border-radius: 15px 0 0 15px;
+    } 
+}
+/* L'apparition progressive des plats de menus */
+@keyframes progress {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.element1{
+    opacity: 0;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element2{
+    opacity: 0;
+    animation-delay: 1s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element3{
+    opacity: 0;
+    animation-delay: 2s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element4{
+    opacity: 0;
+    animation-delay: 3s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element5{
+    opacity: 0;
+    animation-delay: 4s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element6{
+    opacity: 0;
+    animation-delay: 5s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element7{
+    opacity: 0;
+    animation-delay: 6s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element8{
+    opacity: 0;
+    animation-delay: 7s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element9{
+    opacity: 0;
+    animation-delay: 8s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.element10{
+    opacity: 0;
+    animation-delay: 9s;
+    animation-name: progress;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 /****** Media queries ***********/
@@ -147,14 +297,19 @@ gap: 40px;
     margin: auto;
     .menu__title{
         margin: auto;
-        display: flex;
-        gap:24px;
+        gap: 50px;
+        .fa-heart{
+        
+            right: 0;
+    
+            bottom: 10px;
+            
+        }
     }
     .menu__card{
         width: 60%;
        margin: auto;
     }
    }
-  
 /*Fin media queries */
 }
